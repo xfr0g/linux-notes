@@ -50,42 +50,42 @@ Find Files and Directories:
 
 Wildcards:
 A wildcard is used to represent one or multiple characters.
-* - represents zero or more characters.
-? - represents a single character.
-[] - represents a range of characters.
-{} - a brace expansion.
-^ - anything that starts with the first character.
-$ - anything that ends with the last character.
+* ( * ) - represents zero or more characters.
+* ( ? ) - represents a single character.
+* ( [] ) - represents a range of characters.
+* ( {} ) - a brace expansion.
+* ( ^ ) - anything that starts with the first character.
+* ( $ ) - anything that ends with the last character.
 
 File Permissions:
 There are 3 types of permissions:
-r - read
-w - write
-x - execute
+* r - read
+* w - write
+* x - execute
 
 Numerical values:
-0 - no permission
-1 - execute
-2 - write
-3 - execute + write
-4 - read
-5 - read + execute
-6 - read + write
-7 - read + write + execute
+* 0 - no permission
+* 1 - execute
+* 2 - write
+* 3 - execute + write
+* 4 - read
+* 5 - read + execute
+* 6 - read + write
+* 7 - read + write + execute
 
 Each permission can be controlled at three levels:
-u - user = yourself
-g - group = can be people in the same project
-o - other = everyone on the system
-a - all
+* u - user = yourself
+* g - group = can be people in the same project
+* o - other = everyone on the system
+* a - all
 
 Command to change permission:
-chmod
+* chmod
 
 File Ownership:
-chrown - changes the ownership of a file.
-chgrp - changes the group ownership of a file.
--R - changes all the ownership of the files within a directory.
+* chrown - changes the ownership of a file.
+* chgrp - changes the group ownership of a file.
+* -R - changes all the ownership of the files within a directory.
 
 Access Control List:
 ACL provides an additional, more flexible permission mechanism for file systems. It is designed to assist with UNIX file permissions. ACL allows you to give permissions for any user or group to any disc resource.
@@ -94,20 +94,20 @@ setfacl
 getfacl
 
 List of commands for setting up ACL:
-To add permission for user
-setfacl -m u:user:rwx /path/to/file
+* To add permission for user
+* setfacl -m u:user:rwx /path/to/file
 
-To add permissions for a group:
-setfacl -m g:group:rwx /path/to/file
+* To add permissions for a group:
+* setfacl -m g:group:rwx /path/to/file
 
-To allow all files or directories to inherit ACL entries from the directory it is within
-setfacl -Rm "entry" /path/to/dir
+* To allow all files or directories to inherit ACL entries from the directory it is within
+* setfacl -Rm "entry" /path/to/dir
 
-To remove a specific entry
-setfacl -x u:user /path/to/file
+* To remove a specific entry
+* setfacl -x u:user /path/to/file
 
-To remove all entries
-setfacl -b /path/to/file
+* To remove all entries
+* setfacl -b /path/to/file
 
 Note: As you assign the ACL permission to a file/directory, it adds + sign at the end of the permission. And setting w permission with ACL does not allow to remove a file.
 
