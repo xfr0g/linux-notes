@@ -18,13 +18,13 @@ Linux Filesystem Structure:
 * /media - for cdrom mounts.
 
 Linux File Types:
-* - : regular file
-* d : directory
-* l : link
-* c : special file or device file
-* s : socket
-* p : named pipe
-* b : block device
+* (-) : regular file
+* (d) : directory
+* (l) : link
+* (c) : special file or device file
+* (s) : socket
+* (p) : named pipe
+* (b) : block device
 
 What is Root?:
 There are 3 types of root on Linux system:
